@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   1. VARIABLES & THÈMES (La palette 60-30-10)
+   ========================================================================== */
+
+:root {
+    /* ------------------------------------------------------------------
+     THÈME CLAIR (Par défaut)
+     60% : Blanc/Gris très clair (#f8f9fa)
+     30% : Gris anthracite/Noir (#1e293b)
+     10% : Bleu Clair (#0ea5e9 - Sky Blue)
+     ------------------------------------------------------------------ */
+    --bg-primary: #f8f9fa;
+    /* Fond principal */
+    --bg-secondary: #ffffff;
+    /* Fond des cartes/sections */
+    --bg-tertiary: #e2e8f0;
+    /* Éléments de séparation / Gris clair */
+
+    --text-main: #1e293b;
+    /* Texte principal (lisibilité max) */
+    --text-muted: #64748b;
+    /* Texte secondaire (dates, sous-titres) */
+
+    --accent-color: #0284c7;
+    /* Le Bleu Clair (ajusté pour être lisible sur fond blanc) */
+    --accent-hover: #0ea5e9;
+    /* Une teinte plus vive au survol */
+    --accent-text: #ffffff;
+    /* Couleur du texte DANS un bouton bleu */
+
+    --shadow-color: rgba(148, 163, 184, 0.15);
+    /* Ombres douces gris bleuté */
+}
+
+/* ------------------------------------------------------------------
+   THÈME SOMBRE (Activé via la classe .dark-theme sur le body)
+   60% : Noir/Gris profond (#0f172a)
+   30% : Blanc cassé/Gris perle (#f1f5f9)
+   10% : Bleu Foncé (#1d4ed8 - Royal Blue)
+   ------------------------------------------------------------------ */
+body.dark-theme {
+    --bg-primary: #0f172a;
+    /* Fond très sombre (Slate 900) */
+    --bg-secondary: #1e293b;
+    /* Fond des cartes (Slate 800) */
+    --bg-tertiary: #334155;
+    /* Éléments de séparation */
+
+    --text-main: #f1f5f9;
+    /* Texte quasi blanc */
+    --text-muted: #94a3b8;
+    /* Texte secondaire gris clair */
+
+    --accent-color: #1d4ed8;
+    /* Le Bleu Foncé demandé */
+    --accent-hover: #2563eb;
+    /* Légèrement plus clair au survol pour le feedback */
+    --accent-text: #ffffff;
+    /* Texte blanc sur bouton foncé */
+
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    /* Ombres plus fortes en mode sombre */
+}
+
+/* ==========================================================================
+   2. RESET & BASE
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    /* Transition douce lors du changement de thème */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   3. COMPOSANTS UI (Application de la règle 60-30-10)
+   ========================================================================== */
+
+/* A. Les Titres (30%) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* B. Les Liens & Boutons (Les 10% d'accent) */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+        color: var(--accent-hover);
+    }
+}
+
+/* Bouton Principal (CTA) */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    /* Coins légèrement arrondis */
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        /* Petit effet de levier */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* C. Les Cartes / Projets (Le mix 60/30) */
+.card {
+    background-color: var(--bg-secondary);
+    /* 60% local */
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px var(--shadow-color);
+        border-color: var(--accent-color);
+        /* Touche de 10% au survol */
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        color: var(--text-muted);
+        /* Nuance du 30% */
+    }
+}
+
+/* ==========================================================================
+   4. UTILITAIRES DE MISE EN PAGE
+   ========================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    /* Espace blanc important ! */
+}
+
+/* Pour le texte de sélection (petit détail pro) */
+::selection {
+    background-color: var(--accent-color);
+    color: white;
+}

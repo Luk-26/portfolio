@@ -1,0 +1,46 @@
+/* Centrage du contenu pour la page "En construction" */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.construction-container {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.icon-construction {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Animation de flottement pour l'icône */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
