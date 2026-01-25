@@ -1,9 +1,69 @@
-<div class="construction-container">
-    <div class="icon-construction">🚧</div>
-    <h1>Site en cours de développement</h1>
-    <p>
-        Bonjour et bienvenue ! Je suis actuellement en train de développer mon portfolio.<br>
-        Merci de votre patience.<br>
-        Revenez bientôt pour voir le résultat final.
-    </p>
-</div>
+<section class="hero-section">
+    <div class="hero-image">
+        <img src="/images/photoLucas.jpg" alt="Photo de profil Lucas GUILLEMAUD">
+    </div>
+    <div class="hero-text">
+        <h1>Lucas GUILLEMAUD</h1>
+        <p>Étudiant en informatique passionné par le <span class="text-highlight">développement web & applicatif ainsi
+                que par les bases de données</span>.<br>
+            Actuellement en fin de BTS SIO, je suis à la recherche d'une <span class="text-highlight">alternance</span>
+            pour ma future année de <span class="text-highlight">Licence 3 en informatique</span> (2026-2027) afin de
+            mettre ma rigueur et ma curiosité au service de vos projets. <br>Si mon profil vous intéresse, n'hésitez pas
+            à me <a routerLink="/contact" class="text-highlight">contacter</a> !
+        </p>
+    </div>
+</section>
+
+<section class="content-section">
+    <h2>Mes études</h2>
+    <div class="etudes-list">
+        @for (etude of etudes; track etude.titre) {
+        <div class="etude-item" (click)="toggleEtude(etude)" [class.open]="etude.ouvert">
+            <div class="etude-header">
+                <h3 class="clickable-title">{{ etude.titre }}</h3>
+                <div class="chevron-icon"></div>
+            </div>
+            @if (etude.ouvert) {
+            <div class="etude-description" [innerHTML]="etude.description"></div>
+            }
+        </div>
+        }
+    </div>
+</section>
+
+<section class="content-section">
+    <h2>Mes compétences</h2>
+    <div class="skills-grid">
+        @for (competence of competences; track competence.titre) {
+        <div class="skill-card" (click)="toggleCompetence(competence)">
+            <div class="skill-card-inner" [class.is-flipped]="competence.flipped">
+                <div class="skill-card-face skill-card-front">
+                    <h3>{{ competence.titre }}</h3>
+                    <div class="flip-indicator">
+                        <div class="flip-icon"></div>
+                    </div>
+                </div>
+                <div class="skill-card-face skill-card-back">
+                    <ul>
+                        @for (desc of competence.description; track desc) {
+                        <li>{{ desc }}</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>
+
+<section class="content-section">
+    <h2>Mon CV</h2>
+    <div class="action-buttons">
+        <a href="/CV_Lucas_GUILLEMAUD.pdf" download="CV_Lucas_GUILLEMAUD.pdf" class="cta-button">
+            Télécharger mon CV
+        </a>
+        <a href="/CV_Lucas_GUILLEMAUD.pdf" target="_blank" class="cta-button outline">
+            Visualiser mon CV
+        </a>
+    </div>
+</section>

@@ -1,1 +1,53 @@
-<p>experiences works!</p>
+<section class="experiences-section">
+    <div class="container">
+        <div class="header-section">
+            <h1>Mes experiences professionnelles</h1>
+            <p class="subtitle">Découvrez mes expériences professionnelles et mon évolution au fil du temps.</p>
+        </div>
+
+        <div class="timeline">
+            <!-- La ligne verticale centrale -->
+            <div class="timeline-line"></div>
+
+            @for (exp of experiences; track exp.id) {
+            <div class="timeline-item">
+                <!-- Point sur la timeline -->
+                <div class="timeline-dot"></div>
+
+                <!-- Date (A gauche ou au dessus sur mobile) -->
+                <div class="timeline-date">
+                    {{ exp.date }}
+                </div>
+
+                <!-- Contenu (A droite) -->
+                <div class="timeline-content card">
+                    <div class="content-header">
+                        <h2>{{ exp.titre }}</h2>
+                        <div class="company-info">
+                            <span class="company">{{ exp.entreprise }}</span>
+                            @if (exp.lieu) {
+                            <span class="separator">•</span>
+                            <span class="location">{{ exp.lieu }}</span>
+                            }
+                        </div>
+                    </div>
+
+                    <p class="description" [innerHTML]="exp.description"></p>
+
+                    <ul class="tasks-list">
+                        @for (tache of exp.taches; track tache) {
+                        <li>{{ tache }}</li>
+                        }
+                    </ul>
+
+                    <div class="technos-badges">
+                        @for (techno of exp.technos; track techno) {
+                        <span class="badge">{{ techno }}</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

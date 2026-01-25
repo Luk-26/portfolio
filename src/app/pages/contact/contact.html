@@ -1,1 +1,126 @@
-<p>contact works!</p>
+<section class="contact-section">
+    <div class="container">
+        <h1>Me contacter</h1>
+        <p class="subtitle">Un projet ? Une question ? N'hésitez pas à m'écrire !</p>
+
+        <div class="contact-grid">
+            <!-- Le Formulaire -->
+            <div class="form-container">
+                <!-- Message de succès -->
+                <div *ngIf="submitSuccess" class="alert success">
+                    Merci ! Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.
+                </div>
+
+                <!-- Message d'erreur -->
+                <div *ngIf="submitError" class="alert error">
+                    Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard ou me contacter directement
+                    par mail.
+                </div>
+
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!submitSuccess">
+                    <!-- Champ caché pour Netlify -->
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="required">*</span></label>
+                            <input type="text" id="nom" formControlName="nom" placeholder="Votre nom"
+                                [class.invalid]="contactForm.get('nom')?.invalid && contactForm.get('nom')?.touched">
+                            <div class="error-msg"
+                                *ngIf="contactForm.get('nom')?.invalid && contactForm.get('nom')?.touched">
+                                Le nom est requis.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input type="text" id="prenom" formControlName="prenom" placeholder="Votre prénom"
+                                [class.invalid]="contactForm.get('prenom')?.invalid && contactForm.get('prenom')?.touched">
+                            <div class="error-msg"
+                                *ngIf="contactForm.get('prenom')?.invalid && contactForm.get('prenom')?.touched">
+                                Le prénom est requis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" formControlName="email" placeholder="exemple@mail.com"
+                                [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                            <div class="error-msg"
+                                *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                                Un email valide est requis.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="societe">Société</label>
+                            <input type="text" id="societe" formControlName="societe"
+                                placeholder="Nom de votre entreprise (optionnel)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="objet">Objet <span class="required">*</span></label>
+                        <input type="text" id="objet" formControlName="objet" placeholder="Sujet de votre message"
+                            [class.invalid]="contactForm.get('objet')?.invalid && contactForm.get('objet')?.touched">
+                        <div class="error-msg"
+                            *ngIf="contactForm.get('objet')?.invalid && contactForm.get('objet')?.touched">
+                            L'objet est requis.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" formControlName="message" rows="6" placeholder="Votre message..."
+                            [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+                        <div class="error-msg"
+                            *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                            Le message ne peut pas être vide.
+                        </div>
+                    </div>
+
+                    <p class="mandatory-note"><span class="required">*</span> Champs obligatoires</p>
+                    <button type="submit" class="btn-primary submit-btn" [disabled]="isSubmitting">
+                        <span *ngIf="!isSubmitting">Envoyer le message</span>
+                        <span *ngIf="isSubmitting">Envoi en cours...</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Autres moyens de contact -->
+            <div class="contact-info">
+                <h2>Autres moyens de contact</h2>
+                <p>Retrouvez-moi aussi :</p>
+
+                <ul class="contact-list">
+                    <li>
+                        <a [href]="'mailto:' + personalInfo.EMAIL" class="contact-link">
+                            <div class="icon mail-icon"></div>
+                            <span>Par email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [href]="'tel:' + personalInfo.PHONE" class="contact-link">
+                            <div class="icon phone-icon"></div>
+                            <span>Par téléphone</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [href]="personalInfo.LINKEDIN" target="_blank" class="contact-link">
+                            <div class="icon linkedin-icon"></div>
+                            <span>Sur LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [href]="personalInfo.GITHUB" target="_blank" class="contact-link">
+                            <div class="icon github-icon"></div>
+                            <span>Sur GitHub</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

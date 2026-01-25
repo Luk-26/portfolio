@@ -3,9 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portfolio Lucas GUILLEMAUD</title>
+  <title>Portfolio Lucas GUILLEMAUD | Développeur</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio de Lucas GUILLEMAUD, étudiant en informatique et développeur web/logiciel (BTS SIO SLAM). Découvrez mes projets, mes compétences et mon parcours. Recherche alternance.">
+  <meta name="keywords"
+    content="Lucas GUILLEMAUD, Portfolio, Développeur Web, Développeur Logiciel, BTS SIO SLAM, Alternance Informatique, Angular, Java, Fullstack">
+  <meta name="author" content="Lucas GUILLEMAUD">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="Portfolio Lucas GUILLEMAUD | Développeur">
+  <meta property="og:description"
+    content="Étudiant en informatique passionné par le développement web et applicatif. Découvrez mon portfolio et mes projets.">
+  <meta property="og:image" content="https://lucas-guillemaud.fr/images/photoLucas.jpg">
+  <!-- Remplacez par votre URL de production réelle -->
+  <meta property="og:url" content="https://lucas-guillemaud.fr">
+  <meta property="og:type" content="website">
+
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +32,17 @@
 
 <body>
   <app-root></app-root>
+
+  <!-- Formulaire cachée pour Netlify -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="text" name="nom" />
+    <input type="text" name="prenom" />
+    <input type="email" name="email" />
+    <input type="text" name="societe" />
+    <input type="text" name="objet" />
+    <textarea name="message"></textarea>
+  </form>
 </body>
 
 </html>
