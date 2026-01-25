@@ -1,0 +1,104 @@
+.error-section {
+    min-height: 80vh;
+    /* Prend une bonne partie de la hauteur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Le gros chiffre 404 */
+.error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+    /* Dégradé sur le texte utilisant les couleurs du thème */
+    background: linear-gradient(135deg, var(--text-main) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Petite animation flottante */
+    animation: float 6s ease-in-out infinite;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Formes décoratives en arrière-plan */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.1;
+    /* Très subtil */
+    filter: blur(60px);
+}
+
+.shape-1 {
+    top: -10%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background-color: var(--accent-color);
+    animation: drift 20s infinite alternate;
+}
+
+.shape-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background-color: var(--text-main);
+    animation: drift 25s infinite alternate-reverse;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(30px, 30px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .error-message {
+        font-size: 1.2rem;
+    }
+}

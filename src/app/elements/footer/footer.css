@@ -1,0 +1,121 @@
+/* Footer Container */
+.site-footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--bg-tertiary);
+    padding: 3rem 2rem 1.5rem;
+    margin-top: 4rem;
+    /* Separation from page content */
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Columns */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    color: var(--text-main);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-column p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Links List */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Social Links in Footer */
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.footer-socials a img {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer-socials a:hover {
+    color: var(--text-main);
+    transform: translateX(4px);
+}
+
+.footer-socials a:hover img {
+    opacity: 1;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--bg-tertiary);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-footer {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-socials {
+        align-items: center;
+    }
+}

@@ -1,46 +1,305 @@
-/* Centrage du contenu pour la page "En construction" */
-:host {
+/* ==========================================================================
+   PAGE: ACCUEIL STYLES
+   ========================================================================== */
+
+/* --- Layout Sections --- */
+.content-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Hero Section (Already there but refreshing) --- */
+/* --- Hero Section (Already there but refreshing) --- */
+.hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+    /* Top padding increased for fixed navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 25%;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.hero-text {
+    width: 65%;
+}
+
+.text-highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* --- Etudes & Skills (Card Style) --- */
+
+/* Etude Item specific */
+.etude-item {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    /* Whole item is clickable */
+    user-select: none;
+}
+
+.clickable-title {
+    /* No specific style needed anymore, inherits from parent */
+    display: inline-block;
+    position: relative;
+}
+
+/* Etudes Header */
+.etude-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chevron-icon {
+    transition: transform 0.3s ease;
+    width: 24px;
+    height: 24px;
+    background-color: var(--text-main);
+    -webkit-mask: url('/svg/chevron.svg') no-repeat center / contain;
+    mask: url('/svg/chevron.svg') no-repeat center / contain;
+    flex-shrink: 0;
+}
+
+.etude-item.open .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.clickable-title:hover {
+    color: var(--accent-color);
+}
+
+.etude-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px var(--shadow-color);
+    border-color: var(--accent-color);
+}
+
+/* Skill Card specific (Square & 3D Flip) */
+.skill-card {
+    background-color: transparent;
+    /* Container is transparent */
+    perspective: 1000px;
+    /* 3D effect base */
+    cursor: pointer;
+
+    /* Square Layout */
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+.skill-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+    border-radius: 4px;
+    /* Move radius found on container to faces/inner if needed, or keep consistent */
+}
+
+/* Flip trigger */
+.skill-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.skill-card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Decoration (moved from container) */
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 4px;
+    padding: 0.25rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+
+    /* Centering content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-indicator {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+}
+
+.skill-card:hover .flip-indicator {
+    opacity: 1;
+    transform: rotate(45deg);
+    /* Subtle interaction on hover */
+    color: var(--accent-color);
+}
+
+.flip-icon {
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    -webkit-mask: url('/svg/flip_cycle.svg') no-repeat center / contain;
+    mask: url('/svg/flip_cycle.svg') no-repeat center / contain;
+}
+
+.skill-card:hover .skill-card-face {
+    box-shadow: 0 10px 15px var(--shadow-color);
+    border-color: var(--accent-color);
+}
+
+/* --- Skills Grid Layout --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+}
+
+.etude-item h3 {
+    color: var(--text-main);
+    margin-top: 0;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    /* Space between title and chevron */
+}
+
+.skill-card h3 {
+    color: var(--text-main);
+    margin-top: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    word-break: break-word;
+    /* Crucial for small cards */
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.etude-description {
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+.etude-description ::ng-deep ul {
+    margin: 0.5rem 0;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.etude-description ::ng-deep li {
+    margin-bottom: 0.25rem;
+}
+
+.skill-card ul {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.skill-card li {
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* --- Buttons --- */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    text-decoration: none;
     text-align: center;
 }
 
-.construction-container {
-    max-width: 600px;
-    padding: 2rem;
+.cta-button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.icon-construction {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    display: inline-block;
-    animation: float 3s ease-in-out infinite;
+.cta-button.outline {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
-h1 {
-    margin-bottom: 1rem;
-    color: var(--text-main);
+.cta-button.outline:hover {
+    background-color: var(--accent-color);
+    color: var(--accent-text);
 }
 
-p {
-    font-size: 1.125rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-/* Animation de flottement pour l'icône */
-@keyframes float {
-    0% {
-        transform: translateY(0px);
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
     }
 
-    50% {
-        transform: translateY(-10px);
+    .hero-image,
+    .hero-text {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
-    100% {
-        transform: translateY(0px);
+    .action-buttons {
+        justify-content: center;
     }
 }

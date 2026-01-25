@@ -1,0 +1,38 @@
+<nav class="navbar">
+    <div class="navbar-content">
+        <!-- Left: Logo -->
+        <a routerLink="/" class="logo-link">
+            <img src="/logo.svg" alt="Logo" class="site-logo">
+        </a>
+
+        <!-- Center: Navigation Links -->
+        <div class="nav-links">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+            <a routerLink="/experiences" routerLinkActive="active">Expériences</a>
+            <a routerLink="/projets" routerLinkActive="active">Projets</a>
+            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </div>
+
+        <!-- Right: Social Icons -->
+        <div class="social-links">
+            <a href="https://github.com/Luk-26" target="_blank" aria-label="GitHub" class="social-icon">
+                <img src="/svg/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-guillemaud/" target="_blank" aria-label="LinkedIn"
+                class="social-icon">
+                <img src="/svg/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+                @if (isDarkMode) {
+                <!-- Moon Icon for Dark Mode -->
+                <img src="/svg/moon.svg" alt="Dark Mode" width="24" height="24">
+                } @else {
+                <!-- Sun Icon for Light Mode -->
+                <img src="/svg/sun.svg" alt="Light Mode" width="24" height="24">
+                }
+            </button>
+        </div>
+    </div>
+</nav>
