@@ -101,16 +101,27 @@
 }
 
 /* Skill Card specific (Square & 3D Flip) */
+/* --- Skills Grid Layout --- */
+.skills-grid {
+    display: grid;
+    /* 3 colonnes par défaut sur écran large */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* Espacement un peu plus large */
+    justify-items: center;
+    /* Centre les cartes dans leurs cellules */
+}
+
+/* On contraint la largeur des cartes pour qu'elles ne deviennent pas géantes */
 .skill-card {
     background-color: transparent;
-    /* Container is transparent */
     perspective: 1000px;
-    /* 3D effect base */
     cursor: pointer;
-
-    /* Square Layout */
     aspect-ratio: 1/1;
     height: 100%;
+    width: 100%;
+    max-width: 300px;
+    /* Garde une taille raisonnable */
 }
 
 .skill-card-inner {
@@ -120,9 +131,7 @@
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-
     border-radius: 4px;
-    /* Move radius found on container to faces/inner if needed, or keep consistent */
 }
 
 /* Flip trigger */
@@ -172,7 +181,6 @@
 .skill-card:hover .flip-indicator {
     opacity: 1;
     transform: rotate(45deg);
-    /* Subtle interaction on hover */
     color: var(--accent-color);
 }
 
@@ -189,11 +197,16 @@
     border-color: var(--accent-color);
 }
 
-/* --- Skills Grid Layout --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 0.75rem;
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .etude-item h3 {

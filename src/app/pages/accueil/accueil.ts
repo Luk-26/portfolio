@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './accueil.html',
   styleUrl: './accueil.css',
   standalone: true,
@@ -12,7 +13,7 @@ export class Accueil {
   etudes = [
     {
       titre: '[2026 - 2027] Je suis à la recherche d\'une alternance pour une L3 informatique.',
-      description: 'La 3e année de licence informatique est composé de 9 modules de formation donnant lieu à évaluation en fin de module : <ul><li>Mathématiques</li><li>Principes fondamentaux des systèmes d’exploitation</li><li>Paradigmes de programmation</li><li>Systèmes d’information et base de données</li><li>Introduction à la cybersécurité de l’internet</li><li>Management de projet</li><li>Application réparties</li><li>Systèmes de gestion de base de données</li><li>Anglais</li></ul> Ainsi qu\'un module optionnel au choix, donnant lieu à évaluation en fin de module :<ul><li>Génie logiciel</li><li>Technologies pour les applications en réseau</li></ul><br><b>Si mon profil vous intéresse, n\'hésitez pas à me <a href="/contact">contacter</a> !</b>',
+      description: 'La 3e année de licence informatique est composée de 9 modules de formation donnant lieu à évaluation en fin de module : <ul><li>Mathématiques</li><li>Principes fondamentaux des systèmes d’exploitation</li><li>Paradigmes de programmation</li><li>Systèmes d’information et base de données</li><li>Introduction à la cybersécurité de l’internet</li><li>Management de projet</li><li>Application réparties</li><li>Systèmes de gestion de base de données</li><li>Anglais</li></ul> Ainsi qu\'un module optionnel au choix, donnant lieu à évaluation en fin de module :<ul><li>Génie logiciel</li><li>Technologies pour les applications en réseau</li></ul><br><b>Si mon profil vous intéresse, n\'hésitez pas à me <a href="/contact">contacter</a> !</b>',
       ouvert: false
     },
     {
@@ -34,43 +35,48 @@ export class Accueil {
 
   competences = [
     {
-      titre: 'Développement web',
-      description: ['HTML/CSS', 'JavaScript/TypeScript', 'PHP', 'Frameworks : Angular, Laravel'],
+      titre: 'Développement Web',
+      description: ['JavaScript / TypeScript', 'HTML', 'CSS', 'PHP', 'Frameworks : Angular, Laravel'],
       flipped: false
     },
     {
-      titre: 'Développement d\'application',
-      description: ['Java', 'C#', 'Kotlin', 'Programmation orientée objet'],
+      titre: 'Développement App',
+      description: ['Java', 'C#', 'Kotlin', 'Programmation Orientée Objet'],
       flipped: false
     },
     {
-      titre: 'Base de données',
-      description: ['SQL', 'MySQL', 'PostgreSQL'],
+      titre: 'Base de Données',
+      description: ['MySQL', 'PostgreSQL', 'SQL Server', 'Modélisation (MCD/MLD)'],
+      flipped: false
+    },
+    {
+      titre: 'Outils',
+      description: ['Git / GitHub', 'Antigravity', 'JetBrains IDEs', 'Laragon / Wamp', 'Hoppscotch / Postman'],
       flipped: false
     },
     {
       titre: 'Conception',
-      description: ['Maquettage', 'Diagrammes des cas d\'utilisation', 'Diagrammes de classes (UML)'],
+      description: ['Diagrammes de Classes', 'Cas d\'utilisation', 'Maquettage UI'],
       flipped: false
     },
     {
-      titre: 'Versionning',
-      description: ['Git', 'GitHub'],
+      titre: 'Systèmes & Réseaux',
+      description: ['Windows Server', 'Linux (Debian/Ubuntu)', 'Active Directory/DHCP', 'GLPI'],
       flipped: false
     },
     {
-      titre: 'Base de réseaux',
-      description: ['Gestion de parc (GLPI)', 'Windows Server', 'AD', 'DHCP', 'PFSENSE', 'Packet tracer'],
+      titre: 'Savoir-être',
+      description: ['Travail d\'équipe', 'Rigueur', 'Curiosité', 'Autonomie', 'Communication'],
       flipped: false
     },
     {
-      titre: 'Autres compétences techniques',
-      description: ['Windows', 'Linux', 'Python', 'Vulgarisation'],
+      titre: 'Langues',
+      description: ['Français (Natif)', 'Anglais (B1 - Technique)'],
       flipped: false
     },
     {
-      titre: 'Compétences non techniques',
-      description: ['Français (langue maternelle)', 'Anglais (B1)', 'Communication'],
+      titre: 'Centres d\'intérêt',
+      description: ['Tir sportif (en club)', 'Jeux Vidéo (Minecraft, Trackmania, ...)', 'Tennis (En club)'],
       flipped: false
     }
   ];

@@ -1,12 +1,43 @@
-<section class="construction-section">
-    <div class="content">
-        <div class="icon-container">
-            <span class="icon">🚧</span>
-        </div>
-        <h1>Page en construction</h1>
-        <p>Je travaille actuellement sur cette section pour vous présenter mes projets en détail.</p>
-        <p class="sub-text">Revenez bientôt pour voir le résultat !</p>
+<section class="projets-section">
+    <div class="container">
+        <h1>Mes Projets</h1>
+        <p class="subtitle">Une sélection de mes réalisations académiques et professionnelles.</p>
 
-        <a routerLink="/" class="btn-home">Retour à l'accueil</a>
+        <div class="projets-grid">
+            @for (projet of projets; track projet.id) {
+            <article class="projet-card">
+                <div class="card-image">
+                    <!-- Utilisation de NgOptimizedImage pour la performance -->
+                    <img [ngSrc]="projet.imageUrl" fill priority class="bg-img" [alt]="projet.titre">
+                    <div class="overlay"></div>
+                    <span class="year-badge">{{ projet.annee }}</span>
+                </div>
+
+                <div class="card-content">
+                    <h2>{{ projet.titre }}</h2>
+                    <p class="description" [innerHTML]="projet.description"></p>
+
+                    <div class="tags-container">
+                        @for (tech of projet.technos; track tech) {
+                        <span class="tech-tag">{{ tech }}</span>
+                        }
+                    </div>
+
+                    <div class="card-actions">
+                        @if (projet.githubUrl) {
+                        <a [href]="projet.githubUrl" target="_blank" class="btn-action outline">
+                            <span class="icon github-icon"></span> Code Source
+                        </a>
+                        }
+                        @if (projet.demoUrl) {
+                        <a [href]="projet.demoUrl" target="_blank" class="btn-action primary">
+                            <span class="icon demo-icon"></span> Voir le site
+                        </a>
+                        }
+                    </div>
+                </div>
+            </article>
+            }
+        </div>
     </div>
 </section>
