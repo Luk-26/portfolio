@@ -1,59 +1,60 @@
-# Portfolio
+# Portfolio - Lucas GUILLEMAUD
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+Bienvenue sur le code source de mon portfolio.
+Ce projet a pour but de présenter mon parcours, mes compétences et mes réalisations en tant qu'étudiant en informatique.
 
-## Development server
+🔗 **Voir le site en ligne :** [lucasguillemaud-portfolio.netlify.app](https://lucasguillemaud-portfolio.netlify.app)
 
-To start a local development server, run:
+## 🛠 Technologies & Architecture
 
-```bash
-ng serve
-```
+Ce site est une **Single Page Application (SPA)** développée avec les dernières fonctionnalités d'Angular.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+*   **Framework :** Angular 17+ (Utilisation des *Standalone Components*, *Signals* et du nouveau *Control Flow* `@for/@if`).
+*   **Langage :** TypeScript.
+*   **Styling :** CSS Vanilla (Design System personnalisé : variables CSS, Responsive Design, Palette 60-30-10).
+*   **Performance :** `NgOptimizedImage` pour le chargement optimisé des images (WebP).
+*   **SEO :** Optimisation complète (Meta tags, JSON-LD Structured Data, Robots.txt).
+*   **Hébergement :** Netlify (CI/CD automatique depuis GitHub).
+*   **Formulaire :** Netlify Forms (Gestion `serverless` des contacts).
 
-## Code scaffolding
+## 🚀 Installation & Lancement local
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Pour explorer ce projet sur votre machine :
 
-```bash
-ng generate component component-name
-```
+1.  **Cloner le dépôt :**
+    ```bash
+    git clone https://github.com/Luk-26/portfolio.git
+    cd portfolio
+    ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2.  **Installer les dépendances :**
+    ```bash
+    npm install
+    ```
 
-```bash
-ng generate --help
-```
+3.  **Lancer le serveur de développement :**
+    ```bash
+    ng serve
+    ```
+    Ouvrez ensuite votre navigateur sur `http://localhost:4200/`.
 
-## Building
+## 📂 Structure du projet
 
-To build the project run:
+*   `src/app/pages/` : Contient les vues principales (Accueil, Projets, Expériences, Contact).
+*   `src/app/core/` : Configuration globale et constantes.
+*   `public/images/` : Assets graphiques optimisés.
+*   `netlify.toml` : Configuration de déploiement Netlify (Redirections pour le routing Angular).
 
-```bash
-ng build
-```
+## ✨ Fonctionnalités clés
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+*   **Responsive Design :** S'adapte parfaitement aux mobiles, tablettes et desktops.
+*   **Routing Angular :** Navigation fluide sans rechargement de page.
+*   **Animations :** Micro-interactions (survol des cartes, timeline, boutons).
+*   **Mode Sombre (Dark Mode) :** Support natif via variables CSS (activable via classe body).
+*   **Page 404 :** Gestion intelligente des routes inexistantes.
 
-## Running unit tests
+## 👤 Auteur
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Lucas GUILLEMAUD**
+*   Étudiant en BTS SIO option SLAM
+*   Recherche d'alternance pour 2026-2027 (Licence 3 Informatique)
