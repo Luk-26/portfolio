@@ -22,93 +22,63 @@ interface Experience {
 export class Experiences {
   experiences: Experience[] = [
     {
-      id: 6,
-      date: 'Été 2026 - été 2027',
-      titre: 'Recherche d\'alternance !',
-      entreprise: 'inconnu',
-      lieu: 'inconnu',
-      description: 'Je suis à la recherche d\'une alternance en informatique pour mon année de L3 informatique.<br><b>Si mon profil vous intéresse, n\'hésitez pas à me <a href="/contact">contacter</a> !</b>',
-      taches: [],
-      technos: ['Dev web', 'Programmation orientée objet', 'Base de données', 'Système et réseaux', 'Cybersécurité']
-    },
-    {
-      id: 5,
-      date: 'Decembre 2025 - Février 2026',
-      titre: 'Développeur web (stage 2ème année BTS SIO)',
-      entreprise: '[CMQ IED_AURA]',
-      lieu: 'Valence, France',
-      description: 'Création d\'un site afin de créer une version digitale d\'un jeu pédagogique sur la cybersécurité et les mots de passe.',
-      taches: [
-        'Découverte du jeu pédagogique et des objectifs du site web.',
-        'Création de la maquette du site web.',
-        'Création du site web avec Angular.',
-        'Présentation du site à l\'équipe du CMQ et prise en compte des retours.',
-        'Modification du site web en fonction des retours de l\'équipe.',
-        'Phase de test en condition réel lors d\'un évenement pédagogique.',
-        'Prise en compte des retours des utilisateurs et modification du site web en fonction des retours.'
-      ],
-      technos: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Maquettage']
-    },
-    {
       id: 4,
-      date: 'été 2025',
-      titre: 'Emploi saisonnier',
-      entreprise: 'Goutard emballage',
-      lieu: 'Chabeuil, France',
-      description: 'Travail à l\'usine de Goutard emballage.',
-      taches: [
-        'Préparation des machines.',
-        'Remplissage de palette de caguettes en carton en sortie de machine.',
-        'Passage des palettes à la filmeuse.',
-        'Remplissage des camions de livraison.'
-      ],
-      technos: []
+      date: 'Éte 2026 - été 2027',
+      titre: 'Étudiant en Licence 3 Informatique (Alternance)',
+      entreprise: 'Votre Entreprise ?',
+      lieu: 'Valence, Chabeuil et alentours',
+      description: 'Pour votre entreprise, je souhaite mettre à profit mes compétences en développement web, applicatif et en base de données, tout en continuant à monter en compétence grâce à ma formation.<br><b>Je suis prêt à m\'investir pleinement dans vos projets !</b>',
+      taches: [],
+      technos: ['Développement web', 'Programmation orientée objet', 'Base de données', 'Système et réseaux', 'Cybersécurité', 'Versionning', 'Veille technologique']
     },
     {
       id: 3,
-      date: 'mai 2025 - Juin 2025',
-      titre: 'Développeur PowerShell (stage 1ère année BTS SIO)',
-      entreprise: 'KOESIO AURA',
+      date: 'Décembre 2025 - Février 2026',
+      titre: 'Développeur web (Stage)',
+      entreprise: '[CMQ IED_AURA]',
       lieu: 'Valence, France',
-      description: 'Création d\'un script PowerShell pour vérifier la présence de mots de passe sur les BIOS des ordinateurs des collaborateurs.',
+      description: '<b>Contexte :</b> Modernisation des outils pédagogiques pour la sensibilisation à la cybersécurité.<br><b>Mission :</b> Conception et développement d\'une application web interactive "Jeu maux de passe" pour remplacer une version papier.',
       taches: [
-        'Création d\'un premier script fonctionnant en local avec enregistrement dans un fichier csv.',
-        'Modification du script pour que l\'enregistrement se fasse dans une base de données MySQL.',
-        'Rédaction du script de création de la base de données MySQL.',
-        'Adaptation des scripts pour une base de données SQL Server.',
-        'Recherche des moyens de mise en production des scripts via GLPI.'
+        'Découverte du jeu pédagogique et des objectifs du site web.',
+        'Création de la <b>maquette</b> du site web.',
+        'Création du site web avec <b>Angular</b>.',
+        'Présentation du site à l\'équipe du CMQ et prise en compte des retours.',
+        'Modification du site web en fonction des retours de l\'équipe.',
+        'Phase de test en conditions réelles lors d\'un événement pédagogique.',
+        'Modification du site web en fonction des retours utilisateurs.'
       ],
-      technos: ['PowerShell', 'Windows', 'SQL', 'MySQL', 'SQL Server', 'GLPI']
+      technos: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Maquettage', 'Git', 'GitHub', 'cahier de charges']
     },
     {
       id: 2,
-      date: 'été 2024',
-      titre: 'Emploi saisonnier',
-      entreprise: 'Goutard emballage',
-      lieu: 'Chabeuil, France',
-      description: 'Travail à l\'usine de Goutard emballage.',
+      date: 'Mai 2025 - Juin 2025',
+      titre: 'Développeur Automatisation & Scripting (Stage)',
+      entreprise: 'KOESIO AURA',
+      lieu: 'Valence, France',
+      description: '<b>Contexte :</b> Renforcement de la politique de sécurité du parc informatique de l\'entreprise.<br><b>Mission :</b> Vérification et sécurisation automatisée des BIOS des postes de travail via scripting.<br>Ce script rejoindra le script déjà existant de mise en place des mots de passe des BIOS.',
       taches: [
-        'Préparation des machines.',
-        'Remplissage de palette de caguettes en carton en sortie de machine.',
-        'Passage des palettes à la filmeuse.',
-        'Remplissage des camions de livraison.'
+        'Création d\'un premier script <b>PowerShell</b> fonctionnant en local avec enregistrement dans un fichier csv.',
+        'Modification du script <b>PowerShell</b> pour que l\'enregistrement se fasse dans une base de données <b>MySQL</b>.',
+        'Rédaction du script de création de la base de données <b>MySQL</b>.',
+        'Adaptation des scripts <b>PowerShell</b> pour une base de données <b>SQL Server</b>.',
+        'Recherche des moyens de mise en production des scripts via <b>GLPI</b>.',
+        'Autres tâches hors projet (préparation de postes, installation d\'écrans, ...).'
       ],
-      technos: []
+      technos: ['PowerShell', 'Windows', 'SQL', 'MySQL', 'SQL Server', 'Git', 'GitHub', 'GLPI']
     },
     {
       id: 1,
-      date: 'été 2023',
-      titre: 'Emploi saisonnier',
-      entreprise: 'Goutard emballage',
+      date: 'Été 2023, 2024, 2025',
+      titre: 'Agent de Production (Saisonnier)',
+      entreprise: 'Goutard Emballage',
       lieu: 'Chabeuil, France',
-      description: 'Travail à l\'usine de Goutard emballage.',
+      description: '<b>Contexte :</b> Travail posté en usine de production d\'emballages.<br>Cette expérience m\'a permis de développer ma <b>rigueur</b>, ma <b>ponctualité</b> et ma capacité à <b>travailler en équipe</b> dans un environnement industriel exigeant.',
       taches: [
-        'Préparation des machines.',
-        'Remplissage de palette de caguettes en carton en sortie de machine.',
-        'Passage des palettes à la filmeuse.',
-        'Remplissage des camions de livraison.'
+        'Gestion de ligne de production et contrôle qualité.',
+        'Respect strict des normes de sécurité et des cadences.',
+        'Travail d\'équipe et coordination.'
       ],
-      technos: []
+      technos: ['Travail d\'équipe', 'Rigueur', 'Endurance', 'Flexibilité']
     }
   ];
 }

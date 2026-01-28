@@ -36,7 +36,7 @@
 
                     <ul class="tasks-list">
                         @for (tache of exp.taches; track tache) {
-                        <li>{{ tache }}</li>
+                        <li [innerHTML]="tache"></li>
                         }
                     </ul>
 
