@@ -6,11 +6,12 @@
         </a>
 
         <!-- Center: Navigation Links -->
-        <div class="nav-links">
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-            <a routerLink="/experiences" routerLinkActive="active">Expériences</a>
-            <a routerLink="/projets" routerLinkActive="active">Projets</a>
-            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        <div class="nav-links" [class.active]="isMobileMenuOpen">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                (click)="isMobileMenuOpen = false">Accueil</a>
+            <a routerLink="/experiences" routerLinkActive="active" (click)="isMobileMenuOpen = false">Expériences</a>
+            <a routerLink="/projets" routerLinkActive="active" (click)="isMobileMenuOpen = false">Projets</a>
+            <a routerLink="/contact" routerLinkActive="active" (click)="isMobileMenuOpen = false">Contact</a>
         </div>
 
         <!-- Right: Social Icons -->
@@ -32,6 +33,13 @@
                 <!-- Sun Icon for Light Mode -->
                 <img src="/svg/sun.svg" alt="Light Mode" width="24" height="24">
                 }
+            </button>
+
+            <!-- Mobile Burger Menu -->
+            <button class="burger-menu" (click)="toggleMobileMenu()" aria-label="Toggle Navigation">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
             </button>
         </div>
     </div>

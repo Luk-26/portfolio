@@ -10,8 +10,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class Navbar implements OnInit {
   isDarkMode = true; // Default to Dark Mode
+  isMobileMenuOpen = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
