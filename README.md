@@ -3,9 +3,9 @@
 Bienvenue sur le code source de mon portfolio.
 Ce projet a pour but de présenter mon parcours, mes compétences et mes réalisations en tant qu'étudiant en informatique.
 
-🔗 **Voir le site en ligne :** [lucasguillemaud-portfolio.netlify.app](https://lucasguillemaud-portfolio.netlify.app)
+&#128279; **Voir le site en ligne :** [lucasguillemaud-portfolio.netlify.app](https://lucasguillemaud-portfolio.netlify.app)
 
-## 🛠 Technologies & Architecture
+## &#128736; Technologies & Architecture
 
 Ce site est une **Single Page Application (SPA)** développée avec les dernières fonctionnalités d'Angular.
 
@@ -17,7 +17,7 @@ Ce site est une **Single Page Application (SPA)** développée avec les dernièr
 *   **Hébergement :** Netlify (CI/CD automatique depuis GitHub).
 *   **Formulaire :** Netlify Forms (Gestion `serverless` des contacts).
 
-## 🚀 Installation & Lancement local
+## &#128640; Installation & Lancement local
 
 Pour explorer ce projet sur votre machine :
 
@@ -38,14 +38,14 @@ Pour explorer ce projet sur votre machine :
     ```
     Ouvrez ensuite votre navigateur sur `http://localhost:4200/`.
 
-## 📂 Structure du projet
+## &#128194; Structure du projet
 
 *   `src/app/pages/` : Contient les vues principales (Accueil, Projets, Expériences, Contact).
 *   `src/app/core/` : Configuration globale et constantes.
 *   `public/images/` : Assets graphiques optimisés.
 *   `netlify.toml` : Configuration de déploiement Netlify (Redirections pour le routing Angular).
 
-## ✨ Fonctionnalités clés
+## &#10024; Fonctionnalités clés
 
 *   **Responsive Design :** S'adapte parfaitement aux mobiles, tablettes et desktops.
 *   **Routing Angular :** Navigation fluide sans rechargement de page.
@@ -53,7 +53,7 @@ Pour explorer ce projet sur votre machine :
 *   **Mode Sombre (Dark Mode) :** Support natif via variables CSS (activable via classe body).
 *   **Page 404 :** Gestion intelligente des routes inexistantes.
 
-## 👤 Auteur
+## &#128100; Auteur
 
 **Lucas GUILLEMAUD**
 *   Étudiant en BTS SIO option SLAM

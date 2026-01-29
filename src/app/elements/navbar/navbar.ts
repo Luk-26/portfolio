@@ -20,11 +20,11 @@ export class Navbar implements OnInit {
       // If user specifically chose light, we disable dark mode.
       if (savedTheme === 'light') {
         this.isDarkMode = false;
-        document.body.classList.remove('dark-theme');
+        document.documentElement.classList.remove('dark-theme');
       } else {
         // Otherwise (default or explicit dark), we apply dark mode
         this.isDarkMode = true;
-        document.body.classList.add('dark-theme');
+        document.documentElement.classList.add('dark-theme');
       }
     }
   }
@@ -34,10 +34,10 @@ export class Navbar implements OnInit {
 
     if (isPlatformBrowser(this.platformId)) {
       if (this.isDarkMode) {
-        document.body.classList.add('dark-theme');
+        document.documentElement.classList.add('dark-theme');
         localStorage.setItem('theme', 'dark');
       } else {
-        document.body.classList.remove('dark-theme');
+        document.documentElement.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
       }
     }

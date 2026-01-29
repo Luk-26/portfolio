@@ -34,7 +34,7 @@ export class Projets {
     },
     {
       id: 2,
-      titre: 'Portfolio V2',
+      titre: 'Portfolio',
       description: 'Le site sur lequel vous naviguez actuellement ! Il a pour objectif de mettre en avant mes compétences et mes projets en tant que développeur.',
       technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design', 'Netlify'],
       imageUrl: 'images/projets/imgPortfolio.webp',
