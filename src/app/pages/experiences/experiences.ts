@@ -23,10 +23,10 @@ export class Experiences {
   experiences: Experience[] = [
     {
       id: 4,
-      date: 'Éte 2026 - été 2027',
+      date: 'Été 2026 - été 2027',
       titre: 'Étudiant en Licence 3 Informatique (Alternance)',
       entreprise: 'Votre Entreprise ?',
-      lieu: 'Valence, Chabeuil et alentours',
+      lieu: 'Valence, Chabeuil et alentours ou Annonay',
       description: 'Pour votre entreprise, je souhaite mettre à profit mes compétences en développement web, applicatif et en base de données, tout en continuant à monter en compétence grâce à ma formation.<br><b>Je suis prêt à m\'investir pleinement dans vos projets !</b>',
       taches: [],
       technos: ['Développement web', 'Programmation orientée objet', 'Base de données', 'Système et réseaux', 'Cybersécurité', 'Versionning', 'Veille technologique']
