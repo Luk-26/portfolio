@@ -13,22 +13,22 @@ export class Accueil {
   etudes = [
     {
       titre: '[2026 - 2027] Je suis à la recherche d\'une alternance pour une L3 informatique.',
-      description: 'La 3e année de licence informatique est composée de 9 modules de formation donnant lieu à évaluation en fin de module : <ul><li>Mathématiques</li><li>Principes fondamentaux des systèmes d’exploitation</li><li>Paradigmes de programmation</li><li>Systèmes d’information et base de données</li><li>Introduction à la cybersécurité de l’internet</li><li>Management de projet</li><li>Application réparties</li><li>Systèmes de gestion de base de données</li><li>Anglais</li></ul> Ainsi qu\'un module optionnel au choix, donnant lieu à évaluation en fin de module :<ul><li>Génie logiciel</li><li>Technologies pour les applications en réseau</li></ul><br><b>Si mon profil vous intéresse, n\'hésitez pas à me <a href="/contact">contacter</a> !</b>',
+      description: 'Après mon BTS, je vais rejoindre la L3 informatique du lycée Saint Denis à Annonay, cette 3e année de licence est composée de 9 modules de formation donnant lieu à évaluation en fin de module : <ul><li>Mathématiques</li><li>Principes fondamentaux des systèmes d’exploitation</li><li>Paradigmes de programmation</li><li>Systèmes d’information et base de données</li><li>Introduction à la cybersécurité de l’internet</li><li>Management de projet</li><li>Application réparties</li><li>Systèmes de gestion de base de données</li><li>Anglais</li></ul> Ainsi qu\'un module optionnel au choix :<ul><li>Génie logiciel</li><li>Technologies pour les applications en réseau</li></ul><br><b>Si mon profil vous intéresse, n\'hésitez pas à me <a href="/contact">contacter</a> !</b>',
       ouvert: false
     },
     {
       titre: '[2024 - 2026] BTS SIO option SLAM',
-      description: 'Le BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) permet d\'acquérir des compétences en informatique : <ul><li><b>Développement web et applicatif :</b> Conception, codage et maintenance de solutions logicielles.</li><li><b>Bases de données :</b> Modélisation, création et exploitation de bases de données structurées.</li><li><b>Cybersécurité :</b> Sécurisation des développements et des infrastructures.</li><li><b>Gestion de services :</b> Support et administration des services informatiques.</li></ul>',
+      description: 'Le BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) m\'a permis d\'acquérir des compétences en informatique : <ul><li><b>Développement web et applicatif :</b> Conception, codage et maintenance de solutions logicielles.</li><li><b>Bases de données :</b> Modélisation, création et exploitation de bases de données structurées.</li><li><b>Cybersécurité :</b> Sécurisation des développements et des infrastructures.</li><li><b>Gestion de services :</b> Support et administration des services informatiques.</li></ul>J\'ai passé ma première année de BTS au lycée Ella Fitzgerald à Vienne et ma second année au lycée Algoud Laffemas à Valence.',
       ouvert: false
     },
     {
       titre: '[2021 - 2024] Baccalauréat général',
-      description: "J'ai obtenu mon baccalauréat général en 2024 avec les spécialités :<ul><li>Mathématiques</li><li>NSI</li></ul>",
+      description: "J'ai obtenu mon baccalauréat général en 2024 avec les spécialités :<ul><li>Mathématiques</li><li>NSI</li></ul>à l'IND, Valence.",
       ouvert: false
     },
     {
       titre: '[2017 - 2021] Brevet des collèges',
-      description: "J'ai obtenu mon brevet des collèges avec mention très bien en 2021.",
+      description: "J'ai obtenu mon brevet des collèges avec mention très bien en 2021 au collège François Gondin de Chabeuil.",
       ouvert: false
     }
   ];
@@ -36,7 +36,7 @@ export class Accueil {
   competences = [
     {
       titre: 'Développement Web',
-      description: ['JavaScript / TypeScript', 'HTML', 'CSS', 'PHP', 'Frameworks : Angular, Laravel'],
+      description: ['JavaScript / TypeScript', 'HTML', 'CSS', 'PHP', 'Frameworks : Angular, Laravel', 'API REST'],
       flipped: false
     },
     {
@@ -46,17 +46,17 @@ export class Accueil {
     },
     {
       titre: 'Base de Données',
-      description: ['MySQL', 'PostgreSQL', 'SQL Server', 'Modélisation (MCD/MLD)'],
+      description: ['MySQL', 'PostgreSQL', 'SQL Server', 'Modélisation (MCD/MLD)', 'Procédures stockées / Triggers'],
       flipped: false
     },
     {
       titre: 'Outils',
-      description: ['Git / GitHub', 'Antigravity', 'JetBrains IDEs', 'Laragon / Wamp', 'Hoppscotch / Postman'],
+      description: ['Git / GitHub', 'Antigravity', 'JetBrains IDEs', 'Laragon / Wamp', 'Hoppscotch / Postman', 'Docker'],
       flipped: false
     },
     {
       titre: 'Conception',
-      description: ['Diagrammes de Classes', 'Cas d\'utilisation', 'Maquettage UI'],
+      description: ['Diagrammes de Classes', 'Diagrammes de séquence', 'Diagrammes de cas d\'utilisation', 'Maquettage UI'],
       flipped: false
     },
     {
@@ -76,7 +76,7 @@ export class Accueil {
     },
     {
       titre: 'Centres d\'intérêt',
-      description: ['Tir sportif (en club)', 'Jeux Vidéo (Minecraft, Trackmania, ...)', 'Tennis (En club)'],
+      description: ['Tir sportif (en club)', 'Jeux Vidéo (Minecraft, Asphalt Legends, ...)', 'Tennis (En club)'],
       flipped: false
     }
   ];

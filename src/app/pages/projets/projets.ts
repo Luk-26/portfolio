@@ -23,6 +23,16 @@ interface Projet {
 export class Projets {
   projets: Projet[] = [
     {
+      id: 4,
+      titre: 'Projets BTS SIO',
+      description: 'Retrouvez bientôt mes principaux projets réalisés lors de mes 2 ans de BTS SIO option SLAM !',
+      technos: ['Web', 'Applicatif', 'Bases de données', 'et bien d\'autres...'],
+      imageUrl: 'images/projets/imgBtsSio.webp',
+      githubUrl: '',
+      demoUrl: '',
+      annee: '[2024 - 2026]'
+    },
+    {
       id: 3,
       titre: 'Jeu Maux de Passe',
       description: 'Application web éducative de sensibilisation à la cybersécurité. Le but est de composer des paires mot de passe/solidité (temps estimé de craquage).<br>Projet réalisé en stage pour le [CMQ IED_AURA].',
@@ -30,7 +40,7 @@ export class Projets {
       imageUrl: 'images/projets/imgJeuMdp.webp',
       githubUrl: 'https://github.com/Luk-26/SiteJeuMdP',
       demoUrl: '',
-      annee: '2026'
+      annee: 'Fin 2025 - début 2026'
     },
     {
       id: 2,
@@ -40,7 +50,7 @@ export class Projets {
       imageUrl: 'images/projets/imgPortfolio.webp',
       githubUrl: 'https://github.com/Luk-26/portfolio',
       demoUrl: 'https://lucasguillemaud-portfolio.netlify.app',
-      annee: '2026'
+      annee: 'En cours'
     },
     {
       id: 1,
@@ -48,7 +58,7 @@ export class Projets {
       description: 'Outil d\'automatisation PowerShell pour auditer la sécurité des BIOS d\'un parc informatique de plusieurs centaines de postes. Stockage des rapports en base de données SQL.<br>Projet réalisé en stage pour la DSIA de KOESIO AURA.',
       technos: ['PowerShell', 'SQL Server', 'MySQL', 'GLPI'],
       imageUrl: 'images/projets/imgScriptMdpBios.webp',
-      annee: '2025'
+      annee: 'juin 2025'
     }
   ];
 }
