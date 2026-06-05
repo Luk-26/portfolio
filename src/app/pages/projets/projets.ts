@@ -23,34 +23,54 @@ interface Projet {
 export class Projets {
   projets: Projet[] = [
     {
-      id: 4,
-      titre: 'Projets BTS SIO',
-      description: 'Retrouvez bientôt mes principaux projets réalisés lors de mes 2 ans de BTS SIO option SLAM !',
-      technos: ['Web', 'Applicatif', 'Bases de données', 'et bien d\'autres...'],
+      id: 6,
+      titre: 'Minebox tools',
+      description: 'A venir : Création d\'outils autour de l\'API du serveur minecraft Minebox : classements, profils, guildes, votes, etc.<br><br>Temporairement le lien GitHub pointe vers la documentation de l\'API et le lien demo pointe vers le site officiel de Minebox.',
+      technos: ['Site web', 'Application Android', 'Utilisation de l\'API publique de Minebox'],
+      imageUrl: 'images/projets/imgMinebox.webp',
+      githubUrl: 'https://api.minebox.co/docs',
+      demoUrl: 'https://minebox.co/fr',
+      annee: '2026'
+    },
+    {
+      id: 5,
+      titre: 'Projets VEM - application web et API',
+      description: 'Application web permettant de gérer le personnel de l\'entreprise fictive d\'exploitation minière VEM, ainsi que leurs foreuses, capteurs, relevés des capteurs, stocks et déplacement des minerais.<br>Une API permet de voir les stocks et déplacements de minerais, ainsi que d\'en initier de nouveaux.',
+      technos: ['Laravel', 'PHP', 'HTML', 'CSS', 'PostgreSQL', 'API'],
       imageUrl: 'images/projets/imgBtsSio.webp',
-      githubUrl: '',
+      githubUrl: 'https://github.com/Luk-26/BTSSIO2-AP-PROJET-VEM-WEBAPP',
       demoUrl: '',
-      annee: '[2024 - 2026]'
+      annee: 'Début 2026'
+    },
+    {
+      id: 4,
+      titre: 'Projets VEM - application mobile',
+      description: 'Application mobile utilisant les données de l\'API du site web de VEM pour permettre aux techniciens de l\'entreprise de voir les relevés des capteurs des foreuses, les stocks et l\'historique des transferts de minerais, ainsi que d\'initier de nouveaux transferts lorsqu\'ils sont sur le terrain.',
+      technos: ['Kotlin', 'Android', 'XML', 'API'],
+      imageUrl: 'images/projets/imgBtsSio.webp',
+      githubUrl: 'https://github.com/Luk-26/BTSSIO2-AP-PROJET-VEM-ANDROIDAPP',
+      demoUrl: '',
+      annee: 'Début 2026'
     },
     {
       id: 3,
+      titre: 'Portfolio',
+      description: 'Le site web sur lequel vous naviguez actuellement !<br>Il a pour objectif de mettre en avant mes compétences, mon parcours, mes projets et mes expériences en tant qu\'étudiant et futur développeur.',
+      technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design', 'Netlify'],
+      imageUrl: 'images/projets/imgPortfolio.webp',
+      githubUrl: 'https://github.com/Luk-26/portfolio',
+      demoUrl: 'https://lucasguillemaud-portfolio.netlify.app',
+      annee: '2026 - aujourd\'hui'
+    },
+    {
+      id: 2,
       titre: 'Jeu Maux de Passe',
       description: 'Application web éducative de sensibilisation à la cybersécurité. Le but est de composer des paires mot de passe/solidité (temps estimé de craquage).<br>Projet réalisé en stage pour le [CMQ IED_AURA].',
       technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design'],
       imageUrl: 'images/projets/imgJeuMdp.webp',
       githubUrl: 'https://github.com/Luk-26/SiteJeuMdP',
-      demoUrl: '',
+      demoUrl: 'https://mauxdepasse.cmqiedaura.fr',
       annee: 'Fin 2025 - début 2026'
-    },
-    {
-      id: 2,
-      titre: 'Portfolio',
-      description: 'Le site sur lequel vous naviguez actuellement ! Il a pour objectif de mettre en avant mes compétences et mes projets en tant que développeur.',
-      technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design', 'Netlify'],
-      imageUrl: 'images/projets/imgPortfolio.webp',
-      githubUrl: 'https://github.com/Luk-26/portfolio',
-      demoUrl: 'https://lucasguillemaud-portfolio.netlify.app',
-      annee: 'En cours'
     },
     {
       id: 1,
