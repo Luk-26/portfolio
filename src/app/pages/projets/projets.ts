@@ -23,14 +23,24 @@ interface Projet {
 export class Projets {
   projets: Projet[] = [
     {
-      id: 6,
+      id: 7,
       titre: 'Minebox tools',
-      description: 'A venir : Création d\'outils autour de l\'API du serveur minecraft Minebox : classements, profils, guildes, votes, etc.<br><br>Temporairement le lien GitHub pointe vers la documentation de l\'API et le lien demo pointe vers le site officiel de Minebox.',
+      description: 'Création d\'outils autour de l\'API du serveur minecraft Minebox : classements, profils, guildes, votes, etc.<br>Temporairement le lien GitHub pointe vers la documentation de l\'API et le lien demo pointe vers le site officiel de Minebox.',
       technos: ['Site web', 'Application Android', 'Utilisation de l\'API publique de Minebox'],
       imageUrl: 'images/projets/imgMinebox.webp',
       githubUrl: 'https://api.minebox.co/docs',
       demoUrl: 'https://minebox.co/fr',
       annee: '2026'
+    },
+    {
+      id: 6,
+      titre: 'Minebox - PlayerProfil',
+      description: 'Site web utilisant l\'API publique du serveur Minecraft Minebox pour permettre aux utilisateurs de voir le profil d\'un joueur ainsi que différentes informations sur sa guilde en recherchant son pseudo.',
+      technos: ['HTML', 'CSS', 'JavaScript', 'API', 'Netlify'],
+      imageUrl: 'images/projets/imgMinebox.webp',
+      githubUrl: 'https://github.com/Luk-26/Minebox-PlayerProfil',
+      demoUrl: 'https://minebox-playerprofil.netlify.app',
+      annee: 'juin 2026'
     },
     {
       id: 5,
@@ -40,7 +50,7 @@ export class Projets {
       imageUrl: 'images/projets/imgBtsSio.webp',
       githubUrl: 'https://github.com/Luk-26/BTSSIO2-AP-PROJET-VEM-WEBAPP',
       demoUrl: '',
-      annee: 'Début 2026'
+      annee: 'Début - Mi 2026'
     },
     {
       id: 4,
@@ -50,13 +60,13 @@ export class Projets {
       imageUrl: 'images/projets/imgBtsSio.webp',
       githubUrl: 'https://github.com/Luk-26/BTSSIO2-AP-PROJET-VEM-ANDROIDAPP',
       demoUrl: '',
-      annee: 'Début 2026'
+      annee: 'Début - Mi 2026'
     },
     {
       id: 3,
       titre: 'Portfolio',
       description: 'Le site web sur lequel vous naviguez actuellement !<br>Il a pour objectif de mettre en avant mes compétences, mon parcours, mes projets et mes expériences en tant qu\'étudiant et futur développeur.',
-      technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design', 'Netlify'],
+      technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Netlify'],
       imageUrl: 'images/projets/imgPortfolio.webp',
       githubUrl: 'https://github.com/Luk-26/portfolio',
       demoUrl: 'https://lucasguillemaud-portfolio.netlify.app',
@@ -66,7 +76,7 @@ export class Projets {
       id: 2,
       titre: 'Jeu Maux de Passe',
       description: 'Application web éducative de sensibilisation à la cybersécurité. Le but est de composer des paires mot de passe/solidité (temps estimé de craquage).<br>Projet réalisé en stage pour le [CMQ IED_AURA].',
-      technos: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Responsive Design'],
+      technos: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       imageUrl: 'images/projets/imgJeuMdp.webp',
       githubUrl: 'https://github.com/Luk-26/SiteJeuMdP',
       demoUrl: 'https://mauxdepasse.cmqiedaura.fr',
