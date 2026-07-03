@@ -9,7 +9,7 @@
                 données</span>.<br>
             Venant d'obtenir mon BTS SIO option SLAM, je suis à la recherche d'une <span
                 class="text-highlight">alternance</span>
-            sur Valence et ses alentours ou sur Annonay pour ma future année de <span class="text-highlight">Licence 3
+            sur Valence ou Annonay et leurs alentours pour ma future année de <span class="text-highlight">Licence 3
                 en informatique</span> (2026-2027) au campus Saint Denis à Annonay, afin de mettre ma rigueur et ma
             curiosité au service de vos projets.
             <br>Si mon profil vous intéresse, n'hésitez pas à me <a routerLink="/contact"
@@ -29,6 +29,18 @@
             </div>
             @if (etude.ouvert) {
             <div class="etude-description" [innerHTML]="etude.description"></div>
+            @if (etude.diplome == true) {
+            <br>
+            <div class="action-buttons">
+                <br>
+                <a href={{etude.lienDiplome}} download={{etude.lienDiplome}} class="cta-button">
+                    Télécharger mes notes
+                </a>
+                <a href={{etude.lienDiplome}} target="_blank" class="cta-button outline">
+                    Visualiser mes notes
+                </a>
+            </div>
+            }
             }
         </div>
         }
