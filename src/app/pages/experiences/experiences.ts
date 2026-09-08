@@ -23,13 +23,13 @@ export class Experiences {
   experiences: Experience[] = [
     {
       id: 4,
-      date: 'Été 2026 - été 2027',
+      date: 'Août 2026 - août 2027',
       titre: 'Étudiant en Licence 3 Informatique (Alternance)',
-      entreprise: 'Votre Entreprise ?',
-      lieu: 'Valence, Chabeuil et alentours ou Annonay',
-      description: 'Pour votre entreprise, je souhaite mettre à profit mes compétences en développement web, applicatif et en base de données, tout en continuant à monter en compétence grâce à ma formation.<br><b>Je suis prêt à m\'investir pleinement dans vos projets !</b>',
-      taches: [],
-      technos: ['Développement web', 'Programmation orientée objet', 'Base de données', 'Système et réseaux', 'Cybersécurité', 'Versionning', 'Veille technologique']
+      entreprise: 'APF Pool Design',
+      lieu: 'Annonay, France',
+      description: 'Aides aux utilisateurs.',
+      taches: ['Helpdesk'],
+      technos: ['GLPI', 'ERP', 'SSRS', 'Outils de gestion interne']
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ export class Experiences {
     },
     {
       id: 1,
-      date: 'Été 2023, 2024, 2025',
+      date: 'Été 2023, 2024, 2025 et 2026',
       titre: 'Agent de Production (Saisonnier)',
       entreprise: 'Goutard Emballage',
       lieu: 'Chabeuil, France',
