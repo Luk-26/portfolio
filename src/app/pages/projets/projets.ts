@@ -23,16 +23,6 @@ interface Projet {
 export class Projets {
   projets: Projet[] = [
     {
-      id: 7,
-      titre: 'Minebox tools',
-      description: 'Création d\'outils autour de l\'API du serveur minecraft Minebox : classements, profils, guildes, votes, etc.<br>Temporairement le lien GitHub pointe vers la documentation de l\'API et le lien demo pointe vers le site officiel de Minebox.',
-      technos: ['Site web', 'Application Android', 'Utilisation de l\'API publique de Minebox'],
-      imageUrl: 'images/projets/imgMinebox.webp',
-      githubUrl: 'https://api.minebox.co/docs',
-      demoUrl: 'https://minebox.co/fr',
-      annee: '2026'
-    },
-    {
       id: 6,
       titre: 'Minebox - PlayerProfil',
       description: 'Site web utilisant l\'API publique du serveur Minecraft Minebox pour permettre aux utilisateurs de voir le profil d\'un joueur ainsi que différentes informations sur sa guilde en recherchant son pseudo.',
